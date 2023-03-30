@@ -1,4 +1,0 @@
-postgres://shoestore_7bnw_user:iXZ2b6VyijExMgj6pobOZLJAz3hJ6Z6Y@dpg-cggkk9ceoogqfc3147fg-a.singapore-postgres.render.com/shoestore_7bnw
-
-
-dpg-cggkk9ceoogqfc3147fg-a.singapore-postgres.render.com
