@@ -1,13 +1,14 @@
 // import { STRIPE_KEY, CLIENT_URL } from './key';
 ("use strict");
-const {STRIPE_KEY, CLIENT_URL} = require('./key');
+
+// const {STRIPE_KEY, CLIENT_URL} = require('./key');
 
 
-console.log(STRIPE_KEY, CLIENT_URL)
+// console.log(STRIPE_KEY, CLIENT_URL)
 
 require('dotenv').config();
 
-const stripe = require("stripe")(STRIPE_KEY);
+const stripe = require("stripe")(process.env.STRIPE_KEY);
 
 
 /**
@@ -46,8 +47,8 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
         shipping_address_collection: { allowed_countries: ["IN"] },
         payment_method_types: ["card"],
         mode: "payment",
-        success_url: CLIENT_URL + `/success`,
-        cancel_url: CLIENT_URL + "/failed",
+        success_url: process.env.CLIENT_URL + `/success`,
+        cancel_url: process.env.CLIENT_URL + "/failed",
         line_items: lineItems,
       });
 
